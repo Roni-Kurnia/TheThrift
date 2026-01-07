@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Thrift - Sustainable Fashion</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="logo" onclick="showSection('home')">THE THRIFT</div>
-        <ul class="nav-links">
-            <li><a href="#home" onclick="showSection('home')">Home</a></li>
-            <li><a href="#koleksi" onclick="showSection('koleksi')">Koleksi</a></li>
-            <li><a href="#tentang" onclick="showSection('tentang')">Tentang</a></li>
-            <li><a href="#kontak" onclick="showSection('kontak')">Kontak</a></li>
-
-            <!-- Cart -->
-             <li class="cart-icon-container" onclick="toggleCart()">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="showSection('home'); closeMenu()">Home</a></li>
+            <li><a href="#koleksi" onclick="showSection('koleksi'); closeMenu()">Koleksi</a></li>
+            <li><a href="#tentang" onclick="showSection('tentang'); closeMenu()">Tentang</a></li>
+            <li><a href="#kontak" onclick="showSection('kontak'); closeMenu()">Kontak</a></li>
+            <li class="cart-icon-container" onclick="toggleCart(); closeMenu()">
                 🛒 <span id="cart-count">0</span>
             </li>
         </ul>
@@ -1083,5 +1087,6 @@
             }
         });
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
