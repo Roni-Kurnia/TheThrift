@@ -913,7 +913,7 @@
         }
 
     .collection-hero {
-            max-height: 400px;
+            max-height: 350px;
             background-image: url("img/jumbo.png");
             background-size: contain; 
             background-repeat: no-repeat;
